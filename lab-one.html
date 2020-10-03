@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First Lab Quiz</title>
+    <link rel="stylesheet" href="lab-one.css" />
+    <script src="lab-one.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function makeMeLive() {
+        const display = document.getElementById("show-live");
+        const input = document.getElementById("live-input");
+        display.innerHTML = input.value;
+      }
+    </script>
+    <!-- This issue is the span is an inline element not a block element; so either it need
+   to be changed to a block element or it needs display:block or display:flex-->
+    <span class="center-span"
+      >This is your first web technology coding quiz. Place me horizontally at
+      the center of the page using the external css file(lab-one.css)</span
+    >
+
+    <form>
+      Input field:<input id="live-input" type="text" onkeyup="makeMeLive()" />
+    </form>
+
+    <span id="show-live">
+      <!-- any character you type in the input field should appear in this span using the makemelive javascript function. This is not to be centered horizontally on the page -->
+    </span>
+
+    <span id="js-change">
+      <!-- using an external javascript file (lab-one.js). Change the content in this span to "I was place here by javascript". This content should not be at the center -->
+      This is html hard coded. Must be changed by javascript. Read the comment
+    </span>
+  </body>
+</html>
